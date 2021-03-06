@@ -57,6 +57,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             mapView.removeAnnotation(destinationPoint)
         }
         
+        
         mapView.removeOverlays(mapView.overlays)
         coordinates.removeAll()
         tempCoordinates.removeAll()
@@ -68,6 +69,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
         pointCounter = 0
         startPoint = nil
         destinationPoint = nil
+        
+        createGraph.isEnabled = false
+        selectStart.isEnabled = false
+        selectDestination.isEnabled = false
+        createRoute.isEnabled = false
     }
     
     
