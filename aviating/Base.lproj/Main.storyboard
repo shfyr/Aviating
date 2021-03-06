@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="aviating" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhP-YH-QEA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="649"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="CDZ-eK-eYS" appends="YES" id="PzA-wp-icC"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeM-Is-DAB">
+                                <rect key="frame" x="257" y="686" width="137" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="1ry-Vb-AYP"/>
+                                    <constraint firstAttribute="height" constant="55" id="t7k-rS-pwp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="create graph"/>
+                                <connections>
+                                    <action selector="createGraphPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gi5-aa-pq5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fH-Xf-d3a">
+                                <rect key="frame" x="257" y="747" width="137" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="clear"/>
+                                <connections>
+                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5I-E5-j8C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-g3-opR">
+                                <rect key="frame" x="20" y="748" width="185" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="zCL-bx-mgx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="select destinaton"/>
+                                <connections>
+                                    <action selector="selectDestinationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfl-wv-X8H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDi-Fl-rrc">
+                                <rect key="frame" x="20" y="685" width="185" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="U8q-sJ-Hjm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="select start"/>
+                                <connections>
+                                    <action selector="selectStartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mJ7-Rs-YYx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWl-Wy-1JA">
+                                <rect key="frame" x="100" y="811" width="215" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="wj5-8Q-6JP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="create route"/>
+                                <connections>
+                                    <action selector="createRoutePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="36J-Qc-eMC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="QeM-Is-DAB" firstAttribute="leading" secondItem="iDi-Fl-rrc" secondAttribute="trailing" constant="52" id="13R-VN-v7T"/>
+                            <constraint firstItem="QeM-Is-DAB" firstAttribute="top" secondItem="qhP-YH-QEA" secondAttribute="bottom" constant="37" id="3gM-0h-C37"/>
+                            <constraint firstItem="FnH-g3-opR" firstAttribute="top" secondItem="iDi-Fl-rrc" secondAttribute="bottom" constant="8" id="42V-cc-tUt"/>
+                            <constraint firstItem="QeM-Is-DAB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Wg-Cz-xWa"/>
+                            <constraint firstItem="QeM-Is-DAB" firstAttribute="trailing" secondItem="7fH-Xf-d3a" secondAttribute="trailing" id="B9P-mH-YvW"/>
+                            <constraint firstItem="iDi-Fl-rrc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Dtn-1G-vg7"/>
+                            <constraint firstItem="iDi-Fl-rrc" firstAttribute="top" secondItem="qhP-YH-QEA" secondAttribute="bottom" constant="36" id="GNh-Ei-PpE"/>
+                            <constraint firstItem="iDi-Fl-rrc" firstAttribute="leading" secondItem="FnH-g3-opR" secondAttribute="leading" id="HcC-SH-tdh"/>
+                            <constraint firstItem="qhP-YH-QEA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JsN-KD-Tat"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="dWl-Wy-1JA" secondAttribute="bottom" constant="-4" id="Pnf-8G-oW5"/>
+                            <constraint firstItem="qhP-YH-QEA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="T3y-jE-6zI"/>
+                            <constraint firstItem="7fH-Xf-d3a" firstAttribute="top" secondItem="QeM-Is-DAB" secondAttribute="bottom" constant="6" id="VHk-B5-D55"/>
+                            <constraint firstItem="dWl-Wy-1JA" firstAttribute="top" secondItem="FnH-g3-opR" secondAttribute="bottom" constant="8" id="Z4g-Gq-bOh"/>
+                            <constraint firstItem="iDi-Fl-rrc" firstAttribute="trailing" secondItem="FnH-g3-opR" secondAttribute="trailing" id="aAC-kZ-HHm"/>
+                            <constraint firstItem="qhP-YH-QEA" firstAttribute="centerX" secondItem="dWl-Wy-1JA" secondAttribute="centerX" id="bhH-Mo-X83"/>
+                            <constraint firstItem="QeM-Is-DAB" firstAttribute="leading" secondItem="7fH-Xf-d3a" secondAttribute="leading" id="e6c-7J-R1i"/>
+                            <constraint firstItem="dWl-Wy-1JA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="fPz-1q-7i5"/>
+                            <constraint firstItem="qhP-YH-QEA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fbx-O4-eDt"/>
+                            <constraint firstItem="dWl-Wy-1JA" firstAttribute="top" secondItem="7fH-Xf-d3a" secondAttribute="bottom" constant="9" id="fvK-70-fAN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clear" destination="7fH-Xf-d3a" id="pDV-ee-lMw"/>
+                        <outlet property="createGraph" destination="QeM-Is-DAB" id="QYS-cY-9g8"/>
+                        <outlet property="createRoute" destination="dWl-Wy-1JA" id="vBl-mT-1Ta"/>
+                        <outlet property="mapView" destination="qhP-YH-QEA" id="RF9-LO-bXc"/>
+                        <outlet property="selectDestination" destination="FnH-g3-opR" id="VnR-OA-Lis"/>
+                        <outlet property="selectStart" destination="iDi-Fl-rrc" id="UzT-aU-LHr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CDZ-eK-eYS">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="QfG-7L-drX"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-33.333333333333336" y="60.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
